@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:secret/data/users.dart';
 import 'package:secret/model/user.dart';
@@ -38,7 +37,6 @@ class _HomePageState extends State<HomePage> {
       centerTitle: true,
       backgroundColor: Colors.transparent,
       elevation: 0,
-      // title: FaIcon(FontAwesomeIcons.fire, color: Color(0xFF059BFF)),
       title: Image.asset(
         "assets/logo_putih.png",
         fit: BoxFit.contain,
