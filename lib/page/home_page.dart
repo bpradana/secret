@@ -37,12 +37,25 @@ class _HomePageState extends State<HomePage> {
       centerTitle: true,
       backgroundColor: Colors.transparent,
       elevation: 0,
-      title: Image.asset(
-        "assets/logo_putih.png",
-        fit: BoxFit.contain,
-        height: 72,
-        )
-      );
+      title: TextButton.icon(
+          icon: ImageIcon(
+            AssetImage('assets/icons/icon_logo.png'),
+            size: 32,
+          ),
+          label: Text(
+            'deepTalk',
+            style: TextStyle(
+              fontFamily: 'SourceSansPro',
+              color: Color(0xFFEAEAEA),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            ),
+          ),
+          onPressed: () {
+            print('Pressed');
+          }
+          )
+  );
       
 
   Widget buildUser(User user) {

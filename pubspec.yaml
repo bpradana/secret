@@ -23,3 +23,12 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/fonts/
+    - assets/icons/
+  fonts:
+    - family: SourceSansPro
+      fonts:
+        - asset: assets/fonts/SourceSansPro-Bold.ttf
+        - asset: assets/fonts/SourceSansPro-Light.ttf
+        - asset: assets/fonts/SourceSansPro-Regular.ttf
+        - asset: assets/fonts/SourceSansPro-SemiBold.ttf
