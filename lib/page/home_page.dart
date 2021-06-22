@@ -17,7 +17,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        
         appBar: buildAppBar(),
+        backgroundColor: Color(0xff131418),
         body: Padding(
           padding: const EdgeInsets.all(8),
           child: Column(
@@ -37,19 +39,13 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.transparent,
       elevation: 0,
       // title: FaIcon(FontAwesomeIcons.fire, color: Color(0xFF059BFF)),
-      title: TextButton.icon(
-          icon: FaIcon(FontAwesomeIcons.fire, color: Color(0xFF059BFF)),
-          label: Text(
-            'DeepTalk',
-            style: TextStyle(
-              color: Color(0xFF01101A),
-              fontWeight: FontWeight.bold,
-              fontSize: 18,
-            ),
-          ),
-          onPressed: () {
-            print('Pressed');
-          }));
+      title: Image.asset(
+        "assets/logo_putih.png",
+        fit: BoxFit.contain,
+        height: 72,
+        )
+      );
+      
 
   Widget buildUser(User user) {
     final userIndex = users.indexOf(user);
