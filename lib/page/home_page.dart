@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:secret/data/users.dart';
 import 'package:secret/model/user.dart';
@@ -17,7 +16,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        
         appBar: buildAppBar(),
+        backgroundColor: Color(0xff131418),
         body: Padding(
           padding: const EdgeInsets.all(8),
           child: Column(
@@ -36,20 +37,26 @@ class _HomePageState extends State<HomePage> {
       centerTitle: true,
       backgroundColor: Colors.transparent,
       elevation: 0,
-      // title: FaIcon(FontAwesomeIcons.fire, color: Color(0xFF059BFF)),
       title: TextButton.icon(
-          icon: FaIcon(FontAwesomeIcons.fire, color: Color(0xFF059BFF)),
+          icon: ImageIcon(
+            AssetImage('assets/icons/icon_logo.png'),
+            size: 32,
+          ),
           label: Text(
-            'DeepTalk',
+            'deepTalk',
             style: TextStyle(
-              color: Color(0xFF01101A),
+              fontFamily: 'SourceSansPro',
+              color: Color(0xFFEAEAEA),
               fontWeight: FontWeight.bold,
-              fontSize: 18,
+              fontSize: 20,
             ),
           ),
           onPressed: () {
             print('Pressed');
-          }));
+          }
+          )
+  );
+      
 
   Widget buildUser(User user) {
     final userIndex = users.indexOf(user);
